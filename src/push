@@ -1,0 +1,3 @@
+#!/bin/bash
+echo $1 | cat - ~/.stack > ~/.stacktmp
+mv ~/.stacktmp ~/.stack

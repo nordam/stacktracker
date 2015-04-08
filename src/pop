@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Pop'd `head -n 1 ~/.stack`"
+sed -i -e "1d" ~/.stack
