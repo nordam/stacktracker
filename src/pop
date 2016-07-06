@@ -1,3 +1,8 @@
 #!/bin/bash
-echo "Pop'd `head -n 1 ~/.stack`"
-sed -i -e "1d" ~/.stack
+
+# Store UUID and task in ~/.stack/completed
+echo "`date +%s` `head -n 1 ~/.stack/stack`" >> ~/.stack/completed
+
+# Pop the UUID and task from ~/.stack/stack
+echo "Pop'd `head -n 1 ~/.stack/stack | cut -c 34- ` "
+sed -i -e "1d" ~/.stack/stack

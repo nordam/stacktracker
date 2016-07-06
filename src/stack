@@ -1,2 +1,2 @@
 #!/bin/bash
-cat ~/.stack
+cat ~/.stack/stack | cut -c 34-
